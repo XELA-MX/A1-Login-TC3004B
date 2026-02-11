@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f11;
+  color: #fff;
+}
+
+form {
+  background: #1a1a2e;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+#easter {
+  width: 340px;
+  max-height: 0;
+  opacity: 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  margin-top: -0.5rem;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease;
+}
+
+#easter.show {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  margin-top: -0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group svg {
+  position: absolute;
+  left: 0.85rem;
+  color: #555;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.input-group:focus-within svg {
+  color: #7c5cfc;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 0.85rem 0.75rem 2.75rem;
+  background: #12121a;
+  border: 1.5px solid #2a2a3d;
+  border-radius: 0.6rem;
+  color: #eee;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+input:focus {
+  border-color: #7c5cfc;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.15);
+}
+
+button {
+  padding: 0.75rem;
+  background: #7c5cfc;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+}
+
+button:hover {
+  background: #6a48e6;
+  box-shadow: 0 4px 16px rgba(124, 92, 252, 0.35);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+.footer-text a {
+  color: #7c5cfc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-text a:hover {
+  color: #a18aff;
+}
