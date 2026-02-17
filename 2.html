@@ -2,29 +2,27 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8" />
-    <title>DOOM</title>
+    <title>DOOM - SuperApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background: #111;
-        color: #fff;
-        font-family: "Inter", Arial, sans-serif;
+      .doom-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        min-height: 100vh;
         gap: 1rem;
       }
-      h1 {
+      .doom-wrapper h1 {
         font-size: 2rem;
         letter-spacing: 0.1em;
         color: #c0392b;
         text-shadow: 0 0 20px rgba(192, 57, 43, 0.6);
+        text-align: left;
       }
       .dosbox-container {
         width: 640px;
@@ -63,15 +61,77 @@
     </style>
   </head>
   <body>
-    <h1>DOOM</h1>
-    <div id="dosbox"></div>
-    <div class="controls">
-      <button onclick="goFullscreen()">Fullscreen</button>
-    </div>
-    <p class="hint">
-      Click on the game area, then use arrow keys to move. S = fire, W = use,
-      SPACE = speed.
-    </p>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">Super<span>App</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <div class="header-actions">
+          <a href="index.html" class="btn-outline">Login</a>
+          <a href="register.html" class="btn-primary-sm">Registro</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <div class="doom-wrapper">
+        <h1>DOOM</h1>
+        <div id="dosbox"></div>
+        <div class="controls">
+          <button onclick="goFullscreen()">Fullscreen</button>
+        </div>
+        <p class="hint">
+          Click on the game area, then use arrow keys to move. S = fire, W =
+          use, SPACE = speed.
+        </p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Super<span>App</span></a>
+          <p>
+            Una plataforma moderna para gestionar tus proyectos de forma
+            sencilla y eficiente.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Documentación</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SuperApp. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
     <script src="https://js-dos.com/cdn/js-dos-api.js"></script>
     <script>
