@@ -32,7 +32,7 @@
 
     <!-- MAIN -->
     <main class="main-content">
-      <form action="2.html">
+      <form id="login-form">
         <!-- TITLE -->
         <h2>Login</h2>
         <!-- SUBTITLE -->
@@ -54,7 +54,7 @@
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
             <circle cx="12" cy="7" r="4" />
           </svg>
-          <input type="text" placeholder="Usuario" />
+          <input id="login-usuario" type="text" placeholder="Usuario" />
         </div>
         <!-- INPUT GROUP -->
         <div class="input-group">
@@ -74,7 +74,7 @@
             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </svg>
           <!-- INPUT PASSWORD -->
-          <input type="password" placeholder="Contraseña" />
+          <input id="login-password" type="password" placeholder="Contraseña" />
         </div>
         <!-- BUTTON LOGIN -->
         <button type="submit">Login</button>
@@ -131,6 +131,7 @@
       </div>
     </footer>
 
+    <script src="app.js"></script>
     <script>
       (function () {
         var clicks = 0;

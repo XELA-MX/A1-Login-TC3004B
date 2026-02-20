@@ -325,6 +325,27 @@ button:active {
   color: #a18aff;
 }
 
+/* ===== FORM MESSAGES ===== */
+.form-message {
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: -0.25rem;
+}
+
+.form-message--error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.form-message--success {
+  color: #51cf66;
+  background: rgba(81, 207, 102, 0.08);
+  border: 1px solid rgba(81, 207, 102, 0.2);
+}
+
 /* ===== INPUT ROW (two inputs side by side) ===== */
 .input-row {
   display: flex;
