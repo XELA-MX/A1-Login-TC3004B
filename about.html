@@ -12,23 +12,8 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="index.html" class="logo">Super<span>App</span></a>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="services.html">Servicios</a></li>
-          <li><a href="about.html" class="active">Nosotros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-        <div class="header-actions">
-          <a href="index.html" class="btn-outline">Login</a>
-          <a href="register.html" class="btn-primary-sm">Registro</a>
-        </div>
-      </div>
-    </header>
+  <body data-protected>
+    <div id="site-header" data-active="nosotros"></div>
 
     <!-- MAIN -->
     <main class="main-content">
@@ -79,44 +64,8 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">Super<span>App</span></a>
-          <p>
-            Una plataforma moderna para gestionar tus proyectos de forma
-            sencilla y eficiente.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Producto</h4>
-          <ul>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="#">Precios</a></li>
-            <li><a href="#">Documentación</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Empresa</h4>
-          <ul>
-            <li><a href="about.html">Nosotros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Términos</a></li>
-            <li><a href="#">Cookies</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 SuperApp. Todos los derechos reservados.</p>
-      </div>
-    </footer>
+    <div id="site-footer"></div>
+
+    <script src="components.js"></script>
   </body>
 </html>

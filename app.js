@@ -114,16 +114,30 @@
         return;
       }
 
-      // Login exitoso
-      console.log("[SuperApp] Login exitoso:", JSON.stringify(user, null, 2));
+      // Login exitoso — generar token de sesión
+      var token = "";
+      for (var t = 0; t < 32; t++) {
+        token += Math.floor(Math.random() * 16).toString(16);
+      }
+
+      var sessionData = {
+        usuario: user.usuario,
+        nombre: user.nombre,
+        apellido: user.apellido,
+        email: user.email,
+        token: token,
+        timestamp: new Date().toISOString(),
+      };
+
+      localStorage.setItem("superapp_session", JSON.stringify(sessionData));
+
+      console.log("[SuperApp] Login exitoso. Token generado:", token);
+      console.log("[SuperApp] Sesión:", JSON.stringify(sessionData, null, 2));
       showMessage(
         form,
         "¡Bienvenido, " + user.nombre + "! Redirigiendo...",
         false,
       );
-
-      // Guardar sesión
-      localStorage.setItem("superapp_session", JSON.stringify(user));
 
       setTimeout(function () {
         window.location.href = "2.html";

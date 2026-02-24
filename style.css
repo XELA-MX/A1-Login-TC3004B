@@ -121,6 +121,37 @@ body {
   background: #6a48e6;
 }
 
+/* ===== USER BADGE (logged in header) ===== */
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(124, 92, 252, 0.15);
+  color: #7c5cfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.user-name {
+  color: #f0f0f0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.header-actions .user-badge + .btn-outline {
+  margin-left: 0.25rem;
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
   background: #1a1a2e;
