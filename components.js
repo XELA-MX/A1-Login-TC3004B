@@ -33,7 +33,9 @@
     var container = document.getElementById("site-header");
     if (!container) return;
 
-    var activePage = (container.getAttribute("data-active") || "").toLowerCase();
+    var activePage = (
+      container.getAttribute("data-active") || ""
+    ).toLowerCase();
     var session = getSession();
 
     var navItems = [
@@ -41,12 +43,21 @@
       { label: "Servicios", href: "services.html", key: "servicios" },
       { label: "Nosotros", href: "about.html", key: "nosotros" },
       { label: "Contacto", href: "contact.html", key: "contacto" },
+      { label: "Pok\u00e9dex", href: "pokedex.html", key: "pokedex" },
     ];
 
     var navLinksHtml = navItems
       .map(function (item) {
         var cls = item.key === activePage ? ' class="active"' : "";
-        return "<li><a href=\"" + item.href + "\"" + cls + ">" + item.label + "</a></li>";
+        return (
+          '<li><a href="' +
+          item.href +
+          '"' +
+          cls +
+          ">" +
+          item.label +
+          "</a></li>"
+        );
       })
       .join("\n          ");
 
@@ -60,8 +71,12 @@
       actionsHtml =
         '<div class="header-actions">' +
         '<div class="user-badge">' +
-        '<span class="user-avatar">' + initials + "</span>" +
-        '<span class="user-name">' + session.nombre + "</span>" +
+        '<span class="user-avatar">' +
+        initials +
+        "</span>" +
+        '<span class="user-name">' +
+        session.nombre +
+        "</span>" +
         "</div>" +
         '<a href="#" class="btn-outline" id="btn-logout">Cerrar sesi\u00f3n</a>' +
         "</div>";
@@ -150,7 +165,9 @@
 
     var session = getSession();
     if (!session) {
-      console.warn("[SuperApp] Acceso denegado — sesi\u00f3n no iniciada. Redirigiendo al login.");
+      console.warn(
+        "[SuperApp] Acceso denegado — sesi\u00f3n no iniciada. Redirigiendo al login.",
+      );
       window.location.href = "index.html";
     }
   }
