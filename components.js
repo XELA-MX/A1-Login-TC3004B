@@ -44,6 +44,7 @@
       { label: "Nosotros", href: "about.html", key: "nosotros" },
       { label: "Contacto", href: "contact.html", key: "contacto" },
       { label: "Pok\u00e9dex", href: "pokedex.html", key: "pokedex" },
+      { label: "Batalla", href: "battle.html", key: "batalla" },
     ];
 
     var navLinksHtml = navItems

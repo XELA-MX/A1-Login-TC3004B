@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batalla Pokémon - SuperApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-protected>
+    <div id="site-header" data-active="batalla"></div>
+
+    <main class="main-content">
+      <div class="page-section">
+
+        <!-- ===== SCREEN 1: SELECTION ===== -->
+        <div id="btl-selection" class="btl-screen">
+          <div class="page-hero">
+            <h1>Batalla Pokémon</h1>
+            <p>Elige 2 Pokémon para enfrentarlos en una pelea por turnos.</p>
+          </div>
+
+          <!-- Search bars -->
+          <div class="btl-pick-row">
+            <!-- Pokemon 1 -->
+            <div class="btl-pick-col">
+              <h3>Pokémon 1</h3>
+              <div class="input-group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input id="btl-search1" type="text" placeholder="Buscar Pokémon..." />
+              </div>
+              <div id="btl-results1" class="btl-results"></div>
+              <div id="btl-selected1" class="btl-selected-card"></div>
+            </div>
+
+            <!-- VS -->
+            <div class="btl-vs-divider">VS</div>
+
+            <!-- Pokemon 2 -->
+            <div class="btl-pick-col">
+              <h3>Pokémon 2</h3>
+              <div class="input-group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input id="btl-search2" type="text" placeholder="Buscar Pokémon..." />
+              </div>
+              <div id="btl-results2" class="btl-results"></div>
+              <div id="btl-selected2" class="btl-selected-card"></div>
+            </div>
+          </div>
+
+          <div class="btl-start-wrap">
+            <button id="btl-start-btn" class="btl-start-btn" disabled>Iniciar Batalla</button>
+          </div>
+        </div>
+
+        <!-- ===== SCREEN 2: BATTLE ===== -->
+        <div id="btl-arena" class="btl-screen" style="display:none">
+          <!-- Top: Pokemon cards with HP -->
+          <div class="btl-arena-top">
+            <div class="btl-fighter" id="btl-fighter1"></div>
+            <div class="btl-vs-divider btl-vs-small">VS</div>
+            <div class="btl-fighter" id="btl-fighter2"></div>
+          </div>
+
+          <!-- Battle log -->
+          <div class="btl-log-wrapper">
+            <h3>Registro de Batalla</h3>
+            <div id="btl-log" class="btl-log"></div>
+          </div>
+
+          <!-- Controls -->
+          <div class="btl-controls">
+            <button id="btl-next-btn" class="btl-next-btn">Siguiente Turno</button>
+            <button id="btl-auto-btn" class="btl-auto-btn">Auto Batalla</button>
+          </div>
+        </div>
+
+        <!-- ===== SCREEN 3: WINNER ===== -->
+        <div id="btl-winner" class="btl-screen" style="display:none">
+          <div class="btl-winner-content">
+            <h1 class="btl-winner-title">¡GANADOR!</h1>
+            <div id="btl-winner-card" class="btl-winner-card"></div>
+            <button id="btl-restart-btn" class="btl-start-btn">Nueva Batalla</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="components.js"></script>
+    <script src="battle.js"></script>
+  </body>
+</html>
